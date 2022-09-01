@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="css/main.css" /> -->
+  </head>
+  <body>
+    <!-- <script src="js/script.js"></script> -->
+    <h1 align="center">Class Marksheet</h1>
+
+<!--
+This is a form for users to enter scores
+-->
+    <table align="center">
+      <tr>
+        <td>Name:</td>
+        <td><input name="name" id="name" type="text" /></td>
+      </tr>
+
+      <tr>
+        <td>Math:</td>
+        <td><input name="math" id="math" type="text" /></td>
+      </tr>
+
+      <tr>
+        <td>Physics:</td>
+        <td><input name="physics" id="physics" type="text" /></td>
+      </tr>
+
+      <tr>
+        <td>Chemistry:</td>
+        <td><input name="chemical" id="chemical" type="text" /></td>
+      </tr>
+
+      <td>
+        <button type="submit" onclick="score_table()">Submit</button>
+      </td>
+    </table>
+
+<!--
+This table below must not show when user access the browser, 
+it only show after user enter score and click the "Submit" button with 2 button below
+-->
+    <table id="tableScore" border="2" width="100%">
+      <th>No</th>
+      <th>Name</th>
+      <th>Math</th>
+      <th>Physics</th>
+      <th>Chemistry</th>
+      <th>Average Score</th> <!-- This still can not show -->
+    </table>
+
+   <div>
+  <button onclick="">Show the average score</button> <!--This will show the average score column-->
+  <button onclick="">Best student</button> <!--Determine if any average score >= 8 hightlight all the text into red-->
+  <script>
+    var testScore = {
+  name: "",
+  math: 0,
+  physics: 0,
+  chemistry: 0,
+  avg: 0
+};
+var i = 1;
+/* This variable is incremented by 1 every time the user clicks the "Submit" button. Display the "No" column, and the position of rows when added to the table 
+ */
+
+// Show a table after submit
+function score_table() {
+  // document.getElementById("divTable").style.display = "block";
+
+  // Gathering the data after submit
+  testScore.name = document.getElementById("name").value;
+  testScore.math = document.getElementById("math").value;
+  testScore.physics = document.getElementById("physics").value;
+  testScore.chemistry = document.getElementById("chemical").value;
+  testScore.avg = (parseFloat(testScore.math) + parseFloat(testScore.physics) + parseFloat(testScore.chemistry)) / 3;
+  document.getElementById("name").value = "";
+  document.getElementById("math").value = "";
+  document.getElementById("physics").value = "";
+  document.getElementById("chemical").value = "";
+
+  // Insert row
+  var table = document.getElementById("tableScore");
+  var row = table.insertRow(i);
+  var number = row.insertCell(0);
+  var name = row.insertCell(1);
+  var math = row.insertCell(2);
+  var physics = row.insertCell(3);
+  var chemistry = row.insertCell(4);
+  var avg = row.insertCell(5);
+
+  number.innerHTML = i;
+  name.innerHTML = testScore.name;
+  math.innerHTML = testScore.math;
+  physics.innerHTML = testScore.physics;
+  chemistry.innerHTML = testScore.chemistry;
+  avg.innerHTML = testScore.avg;
+  i++;
+  /** I need help, How to calculate the average score and if the average 
+  score is >= 8 then hightlight every text in that row into red
+   */
+}
+
+
+  </script>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // const a;
+        // a = "yse"
+        // console.log(a)
+
+//         var car ;
+//         let car2 ;
+//         let x = 5 + 2 + 3;
+//         let x ;
+            // let x = 2 + 3 + "5";
+//             {
+//   let x = 2;
+// }
+// let x = 2;
+// x++;
+// x = 310; // change the x value to 3
+
+// function 
+
+// function myFunction(a, b, c) {
+//     return a * b * c;// nan output 
+// }
+// let x = myFunction(4, 3, 5);
+// console.log(x)
+
+// string method and property names
+
+// slice example 
+
+                // let str = "myFunction,function, Apple, Banana"
+
+//              let str2 = str.slice(-8,-4);
+//             console.log(str2)
+
+                // let substring = str.substring(7,5);
+                // console.log(substring)
+
+                // let substr = str.substr(5,3)
+                // console.log(substr)
+
+                // let txt  = "";
+                // let txt2 = txt.charAt(0); //return empty string
+                // console.log(txt2);
+                // txt[0] // return undefined
+
+                // let text = "a,b,c,d,e,f";
+                // const myArray = text.split(",");// if im enter a wrong varible like | return in array in 0  string all
+                // myArray[3] = "t";
+                
+                // console.log(myArray)
+
+//  search method
+                 
+                
+                // console.log(str.lastIndexOf("my",10)) it search backward from last or starting point
+                // console.log(str.match(/function/gi)) return array if not found return null
+
+// Array methods
+
+                // const array = ["a", "b", "c", "d", "e",];
+                // console.log(array.toString());
+                // console.log(array.join("*"));
+
+                // const arr = array.slice(2)
+                // console.log(arr)
+                // const arr2 = array.slice(1, 4)
+                // console.log(arr2)
+
+                // const points = [40, 20, 100, 1, 5, 25, 10];
+                // const aa = points.map((i)=>{
+                //     i * i
+                // })
+                // console.log(aa)
+
+         //  spred operator
+                // const a = [1, 2, 3, 4, 5];
+                // const c = [...points,...a]
+                // console.log(c)
+                // points.pop();
+                // console.log(points)
+                // points.sort((a,b) => {return b - a});
+                // console.log(points)
+
+                // let max = Math.max.apply(null,points);
+                // console.log(max)
+
+// Array iterators methods
+    // foreach always returns undefined
+    // Note: forEach expects a synchronous function.
+
+                // points.forEach(fun)
+                // function fun(a,b,array){
+                //     console.log(a,b,array)
+                // }
+                
+                // let value =  points.forEach((a,b) => { return a * a})
+                //     console.log(value)
+
+            //     const numbers1 = [];
+            //    numbers1.forEach((e)=>{console.log(e)})
+
+    // map return new array
+
+
+    
+                // let arr = points.map((a,b)=>{
+                //     // return a * 2 
+                //     //  a + 9
+                //     return  a + 9
+                // }).sort((a,b) => {return b - a});
+                // console.log(arr)
+                // map method use method chaining 
+                const numbers1 = [];   //return blanck array
+                let n = numbers1.map((x) => {return x + 1}); // without rerturn undefined
+                console.log(n)
+
+
+    // filter return new array
+            //          let arr = points.filter((a,b)=>{ if(a > 1)
+            //             {a}
+            //          }).reverse() // return black array without return values
+            //          console.log(arr)
+
+            //         const numbers1 = [1,2,3,4,5,6];
+            //   let n = numbers1.filter((e)=>{return })
+            //   console.log(n)
+
+    // reduce return new array
+//     const array = [15, 16, 17, 18, 19];
+
+// function reducer(previous, current, index) {
+//   const returns = previous + current;
+//   console.log(`previous: ${previous}, current: ${current}, index: ${index}, returns: ${returns}`);
+//    returns;
+// }
+//output
+// previous: 15, current: 16, index: 1, returns: 31
+// test.html:142 previous: undefined, current: 17, index: 2, returns: NaN
+// test.html:142 previous: undefined, current: 18, index: 3, returns: NaN
+// test.html:142 previous: undefined, current: 19, index: 4, returns: NaN
+
+// array.reduce(reducer);
+
+// const numbers = [45, 4, 9, 16, 25];
+// let sum = numbers.reduce(myFunction, 100);
+
+// function myFunction(total, value) {
+//   return total + value;
+// }
+// console.log(sum)
+                
+    
+
+    // every return boolean
+                    //  const b = []; //return true;
+                    // let a = b.every((x)=>{ return }); //return false
+                    // console.log(a)
+
+    // some return boolean 
+                    //  const b = []; //return false;
+                    //  let a = b.some((x)=>{ return x>10 }); // return false   if 
+                    //  console.log(a)
+
+        
+    // for in for of loop
+                    // for (let i in points){
+                    //     console.log("for in",i)
+                         
+                    // }
+
+                    // for (let i of points){
+                    //     console.log(i)
+                    // }
+               
+    // do while loop
+
+                    // let text = ""
+                    // let i = 0;
+
+                    // while(i<10){
+                    //     console.log("before",i)
+                    //       text += "<br>The number is " + i;
+                    //       i++;
+                    //       console.log('after', i)
+                    // }
+                    // console.log(text)
+
+                        // do {
+                        //     console.log("before",i)
+                        //   text += "<br>The number is " + i;
+                        //   i++;
+                        //   console.log('after', i)
+                        // }
+                        // while (i < 10);  
+                        // console.log(text)
+
+
+    // Objects 
+                        // const person = {
+                        // firstName: "John",
+                        // lastName: "Doe",
+                        // id: 5566,
+                        // };
+                        // person.name = function() {
+                        //   return (this.firstName + " " + this.lastName).toUpperCase(); // undefined
+                        // };
+                        // console.log(person.name())
+
+                        // let arr = Object.values(person)
+                        // console.log(arr)
+                        // let json = JSON.stringify(person);
+                        // console.log(json)
+                        // let p = JSON.parse(json)
+                        // console.log(p)
+
+                        // let str = "";
+                        // for(let x in arr)
+                        // {
+                        //     str += arr[x] 
+                        // }
+                        // console.log(str)
+
+// getter and setter methods for objects
+
+                        // const person = {
+                        //       firstName: "John",
+                        //       lastName: "Doe",
+                        //       language: "en",
+                        //       set ls(value){
+                        //         return this.lastName = value;
+                        //       },
+                        //     //   get lang() {
+                        //     //     return this.language;
+                        //     //   }
+
+                             
+                        //     };
+                        //     person.lastName = "John";
+                        //        console.log(person.lastName)
+
+                       
+
+// Define Setters and Getters
+                            //const obj = {counter : 0};
+                            // Object.defineProperty(obj, "reset", {
+                            //   get : function () {this.counter = 0;}
+                            // });
+                            // Object.defineProperty(obj, "increment", {
+                            //   get : function () {this.counter++;}
+                            // });
+                            // Object.defineProperty(obj, "decrement", {
+                            //   get : function () {this.counter--;}
+                            // });
+                            // Object.defineProperty(obj, "add", {
+                            //   set : function (value) {this.counter += value;}
+                            // });
+                            // Object.defineProperty(obj, "subtract", {
+                            //   set : function (value) {this.counter -= value;}
+                            // });
+
+                            // console.log(obj.add=5);
+                            // console.log(obj.reset);
+                            // console.log(obj)
+
+//prototype add
+                            // function Person(first, last, age, eyecolor) {
+                            //           this.firstName = first;
+                            //           this.lastName = last;
+                            //           this.age = age;
+                            //           this.eyeColor = eyecolor;
+                            //         }
+
+                            //         Person.prototype.nationality = "English"; 
+                            //         Person.prototype.name = function() {
+                            //               return this.firstName + " " + this.lastName;
+                            //             };
+                            //         let app = new Person("a","b",21,"as")
+                            //         console.log(app.name())   
+                            
+//object iterators 
+
+                                        // function myNumbers() {      //does not support for of loop
+                                        //   let n = 0;
+                                        //   return {
+                                        //     next: function() {
+                                        //       n += 10;
+                                        //       return {value:n, done:false};
+                                        //     }
+                                        //   };
+                                        // }
+
+                                        // // Create Iterable
+                                        // const n = myNumbers();
+                                        // n.next(); // 10
+                                        // n.next(); // 20
+                                        // n.next(); // 30
+
+                                        // console.log(n.next())
+
+
+
+                                        // // Create an Object
+                                        // myNumbers = {};
+
+                                        // // Make it Iterable
+                                        // myNumbers[Symbol.iterator] = function() {
+                                        //   let n = 0;
+                                        //   done = false;
+                                        //   return {
+                                        //     next() {
+                                        //       n += 10;
+                                        //       if (n == 100) {done = true}
+                                        //       return {value:n, done:done};
+                                        //     }
+                                        //   };
+                                        // }
+
+                                        // let text = ""
+                                        // for (const num of myNumbers) {
+                                        //   text += num 
+                                        // }                                      
+                                        
+                                        // console.log(myNumbers.next()) // Create an Object
+
+
+
+
+
+                                        // myNumbers = {};
+
+                                        // // Make it Iterable
+                                        // myNumbers[Symbol.iterator] = function() {
+                                        //   let n = 0;
+                                        //   done = false;
+                                        //   return {
+                                        //     next() {
+                                        //       n += 10;
+                                        //       if (n == 100) {done = true}
+                                        //       return {value:n, done:done};
+                                        //     }
+                                        //   };
+                                        // }
+
+                                        // // Create an Iterator
+                                        // let iterator = myNumbers[Symbol.iterator](); //return object
+
+                                        // let text = ""
+                                        // while (true) {
+                                        //   const result = iterator.next();
+                                        //   if (result.done) break;
+                                        //   text += result.value +"<br>";
+                                        // }
+
+//// Accessing Properties
+// Object.getOwnPropertyDescriptor(object, property)
+                                        // const object1 = {
+                                        //                   property1: 42
+                                        //                 };
+
+                                        //                 const descriptor1 = Object.getOwnPropertyDescriptor(object1, 'property1');
+
+                                        //                 console.log(descriptor1.configurable);
+                                        //                 // expected output: true
+
+                                        //                 console.log(descriptor1.value);
+                                        //                 // expected output: 42
+
+// Returns all properties as an array
+// Object.getOwnPropertyNames(object)
+
+
+                                            // const object1 = {
+                                            //   a: 1,
+                                            //   b: 2,
+                                            //   c: 3
+                                            // };
+                                            
+                                            // console.log(Object.getOwnPropertyNames(object1));
+                                        
+// Accessing the prototype
+// Object.getPrototypeOf(object)
+
+
+                                                // const prototype1 = {};
+                                                // const object1 = Object.create(prototype1);
+                                                                                            // 
+                                                // console.log(Object.getPrototypeOf(object1) === prototype1);
+                                                // expected output: true
+
+// Returns enumerable properties as an array
+// Object.keys(object)
+
+                                                    // const object1 = {
+                                                    //   a: 'somestring',
+                                                    //   b: 42,
+                                                    //   c: false
+                                                    // };
+                                                    
+                                                    // console.log(Object.keys(object1));
+                                        
+                                       
+//functions
+                                                       
+                                                    // let x = (a,b) => { return a * b }; // undefined
+                                                    // console.log(x(2,3))  // Nan
+
+ // class is not a object its a template of object
+
+
+ // promises
+//  function getUser(userId) {
+//     return new Promise((resolve, reject) => {
+//         console.log('Get user from the database.');
+//         setTimeout(() => {
+//             resolve({
+//                 userId: userId,
+//                 username: 'john'
+//             });
+//         }, 1000);
+//     })    
+// }
+    
+
+
+// function getServices(user) {
+//     return new Promise((resolve, reject) => {
+//         console.log(`Get services of  ${user.username} from the API.`);
+//         setTimeout(() => {
+//             resolve(['Email', 'VPN', 'CDN']);
+//         }, 2 * 1000);
+//     });
+// }
+
+// function getServiceCost(services) {
+//     return new Promise((resolve, reject) => {
+//         console.log(`Calculate service costs of ${services}.`);
+//         setTimeout(() => {
+//             resolve(services.length * 100);
+//         }, 3 * 1000);
+//     });
+// }
+
+// getUser(100)
+//     .then(getServices)
+//     .then(getServiceCost)
+//     .then(console.log);
+
+// clg for time with promises
+//     const tom = () => console.log('Tom');
+// const jerry = () => console.log('Jerry');
+// const doggy = () => console.log('Doggy');
+// const cartoon = () => {
+//     console.log('Cartoon');
+//     setTimeout(tom, 0);
+//     setTimeout(doggy, 0);
+//     new Promise((resolve, reject) => {
+//         resolve('I am a Promise, right after tom and doggy! Really?');
+//     }).then(resolve => {
+//         console.log(resolve);
+//         setTimeout(() => {
+//             console.log('inner timeout')
+//         }, 0)
+//     });
+//     new Promise((resolve, reject) =>
+//         resolve('I am a Promise after Promise!')
+//     ).then(resolve => console.log(resolve));
+//     jerry();
+// }
+// cartoon();
+
+// function a(aa){
+//   return this
+   
+// }
+// a("a")
+
+// function Person(firstName, lastName) {
+   
+
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+
+//     this.getFullName = function () {
+//         return this.firstName + " " + this.lastName;
+//     };
+// }
+// let person = new Person("asd","dsa")
+// console.log(person.getFullName());
+
+// console.log(Person.prototype)
+
+// const a = [1,2]
+// let b = a.slice(4,5)
+// console.log("asdf",b)
+
+
+
+
+
+
+    </script>
+</body>
+</html>
